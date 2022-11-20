@@ -1,4 +1,4 @@
-# lemp-dev-containers
+# PHP-Postgres-Nginx-Composer
 
 docker compose setup Nginx 17.1 | PHP 8.1.1 | PostgresQL 14.1
 
@@ -8,6 +8,7 @@ This setup comes with:
 - PHP 8.1.1
 - Nginx (1.17-alpine)
 - PostgresQL 14.1
+- Composer 2.2.4
 
 # Requirements
 
@@ -54,3 +55,17 @@ Some default credentials are set in `docker-compose.yml`
 - POSTGRES_USER: postgres
 - POSTGRES_PASSWORD: password
 - POSTGRES_DB: postgres
+
+
+# Running Composer Commands
+
+To run composer commands, prefix the command with `docker compose`
+
+Examples:
+```bash
+docker compose composer require nesbot/carbon
+```
+
+```bash
+docker compose composer update
+```
